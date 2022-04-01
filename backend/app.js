@@ -56,7 +56,7 @@ app.use((error, req, res, next) => {
     res.status(status).json({ message: message });
   });
 
-mongoose.connect('mongodb+srv://admin:tes=true&w=majority',
+mongoose.connect('mongodb://127.0.0.1:27017/mydatabase',
     { useUnifiedTopology: true, useNewUrlParser: true })
     .then(() => {
         const server = app.listen(5000);
